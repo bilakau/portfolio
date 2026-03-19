@@ -1,18 +1,18 @@
-import React from 'react';
+import type { FC } from 'react';
 
 interface HamburgerProps {
   isOpen: boolean;
   toggle: () => void;
 }
 
-export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
+export const Hamburger: FC<HamburgerProps> = ({ isOpen, toggle }) => {
   return (
-    <React.Fragment>
+    <>
       {/* Hidden SVG defs for gooey filter */}
       <svg style={{ position: 'fixed', width: 0, height: 0, overflow: 'hidden', top: 0, left: 0 }} aria-hidden="true">
         <defs>
           <filter id="gooeyness">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation={2.2} result="blur" />
             <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
             <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
           </filter>
@@ -76,6 +76,6 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
           <path className="juicy-line" d="M 66,32 L 34,68" />
         </svg>
       </button>
-    </React.Fragment>
+    </>
   );
 };
