@@ -21,3 +21,79 @@
     @apply bg-zinc-900/40 backdrop-blur-xl border border-white/5 shadow-2xl;
   }
 }
+
+/* Juicy Hamburger Menu Plate 6 */
+.juicy-plate {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.juicy-plate svg {
+  height: 60px;
+  position: absolute;
+  width: 60px;
+}
+
+.juicy-burger {
+  filter: url(#gooeyness);
+}
+
+.juicy-x {
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.juicy-line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.juicy-x .juicy-line {
+  stroke-width: 5.5px;
+}
+
+.juicy-plate.active .juicy-line {
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+
+.juicy-plate.active .juicy-x {
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+.juicy-plate.plate6 .juicy-line {
+  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+}
+
+.juicy-plate.plate6 .line1 { stroke-dasharray: 21 127; }
+.juicy-plate.plate6 .line2 { stroke-dasharray: 21 106; }
+.juicy-plate.plate6 .line3 { stroke-dasharray: 21 106; }
+.juicy-plate.plate6 .line4 { stroke-dasharray: 21 126; }
+
+.juicy-plate.plate6 .juicy-x {
+  transition: transform 400ms 50ms;
+}
+
+.juicy-plate.plate6.active .juicy-line {
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+}
+
+.juicy-plate.plate6.active .line1 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; }
+.juicy-plate.plate6.active .line2 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; }
+.juicy-plate.plate6.active .line3 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; }
+.juicy-plate.plate6.active .line4 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; }
+
+.juicy-plate.plate6.active .juicy-x {
+  transition: transform 400ms 50ms;
+}
