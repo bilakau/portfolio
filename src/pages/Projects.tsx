@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
@@ -31,9 +32,9 @@ const projects = [
 const Projects = () => {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
       className="max-w-6xl mx-auto space-y-16"
     >
@@ -49,7 +50,8 @@ const Projects = () => {
           <motion.article 
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: index * 0.2 }}
             className="glass-panel rounded-3xl overflow-hidden group flex flex-col h-full"
           >

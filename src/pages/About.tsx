@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, GraduationCap } from 'lucide-react';
 
@@ -6,9 +7,9 @@ const About = () => {
   
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
       className="max-w-4xl mx-auto space-y-16"
     >
@@ -60,7 +61,8 @@ const About = () => {
                  <motion.div 
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     className="px-4 py-2 rounded-lg bg-zinc-800/50 border border-zinc-700 text-zinc-300 font-medium hover:border-pink-500/50 hover:text-white transition-colors cursor-default"
                  >
