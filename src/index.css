@@ -72,28 +72,12 @@
   transition: transform 400ms 350ms;
 }
 
-.juicy-plate.plate6 .juicy-line {
-  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
-}
+.plate6-l1 { stroke-dasharray: 21 127; }
+.plate6-l2 { stroke-dasharray: 21 106; }
+.plate6-l3 { stroke-dasharray: 21 106; }
+.plate6-l4 { stroke-dasharray: 21 126; }
 
-.juicy-plate.plate6 .line1 { stroke-dasharray: 21 127; }
-.juicy-plate.plate6 .line2 { stroke-dasharray: 21 106; }
-.juicy-plate.plate6 .line3 { stroke-dasharray: 21 106; }
-.juicy-plate.plate6 .line4 { stroke-dasharray: 21 126; }
-
-.juicy-plate.plate6 .juicy-x {
-  transition: transform 400ms 50ms;
-}
-
-.juicy-plate.plate6.active .juicy-line {
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
-}
-
-.juicy-plate.plate6.active .line1 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; }
-.juicy-plate.plate6.active .line2 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; }
-.juicy-plate.plate6.active .line3 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; }
-.juicy-plate.plate6.active .line4 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; }
-
-.juicy-plate.plate6.active .juicy-x {
-  transition: transform 400ms 50ms;
-}
+.plate6-open-l1 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l2 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l3 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l4 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }

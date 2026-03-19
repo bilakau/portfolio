@@ -45,9 +45,9 @@ function App() {
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact'); }} className="hover:text-purple-400 transition-colors cursor-pointer">Contact</a>
         </div>
 
-        {/* Mobile Hamburger Menu Button */}
-        <div className="md:hidden z-50">
-           <Hamburger isOpen={isMenuOpen} toggle={() => setIsMenuOpen(!isMenuOpen)} />
+        {/* Mobile Hamburger – visible only below md breakpoint */}
+        <div className="flex md:hidden items-center">
+          <Hamburger isOpen={isMenuOpen} toggle={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
       </nav>
 
