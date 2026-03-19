@@ -7,9 +7,9 @@ interface HamburgerProps {
 
 export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
   return (
-    <>
+    <React.Fragment>
       {/* Hidden SVG defs for gooey filter */}
-      <svg style={{ position: 'fixed', width: 0, height: 0, overflow: 'hidden', top: 0, left: 0 }}>
+      <svg style={{ position: 'fixed', width: 0, height: 0, overflow: 'hidden', top: 0, left: 0 }} aria-hidden="true">
         <defs>
           <filter id="gooeyness">
             <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
@@ -23,7 +23,19 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
       <button
         onClick={toggle}
         aria-label="Toggle menu"
-        style={{ width: 52, height: 52, position: 'relative', background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        type="button"
+        style={{
+          width: 52,
+          height: 52,
+          position: 'relative',
+          background: 'transparent',
+          border: 'none',
+          padding: 0,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
         {/* Burger icon */}
         <svg
@@ -38,7 +50,6 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
             transition: 'transform 400ms',
             pointerEvents: 'none',
           }}
-          version="1.1"
           viewBox="0 0 100 100"
         >
           <path className={`juicy-line line1 ${isOpen ? 'plate6-open-l1' : 'plate6-l1'}`} d="M 50,35 H 30 M 50,35 H 70 V 38 H 30 V 41 H 70" />
@@ -59,13 +70,12 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle }) => {
             transition: isOpen ? 'transform 400ms 50ms' : 'transform 400ms',
             pointerEvents: 'none',
           }}
-          version="1.1"
           viewBox="0 0 100 100"
         >
           <path className="juicy-line" d="M 34,32 L 66,68" />
           <path className="juicy-line" d="M 66,32 L 34,68" />
         </svg>
       </button>
-    </>
+    </React.Fragment>
   );
 };

@@ -72,12 +72,12 @@
   transition: transform 400ms 350ms;
 }
 
-.plate6-l1 { stroke-dasharray: 21 127; }
-.plate6-l2 { stroke-dasharray: 21 106; }
-.plate6-l3 { stroke-dasharray: 21 106; }
-.plate6-l4 { stroke-dasharray: 21 126; }
+.plate6-l1 { stroke-dasharray: 21, 127; }
+.plate6-l2 { stroke-dasharray: 21, 106; }
+.plate6-l3 { stroke-dasharray: 21, 106; }
+.plate6-l4 { stroke-dasharray: 21, 126; }
 
-.plate6-open-l1 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
-.plate6-open-l2 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
-.plate6-open-l3 { stroke-dasharray: 2 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
-.plate6-open-l4 { stroke-dasharray: 2 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l1 { stroke-dasharray: 2, 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l2 { stroke-dasharray: 2, 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l3 { stroke-dasharray: 2, 106; stroke-dashoffset: -91px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
+.plate6-open-l4 { stroke-dasharray: 2, 127; stroke-dashoffset: -94px; transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; }
